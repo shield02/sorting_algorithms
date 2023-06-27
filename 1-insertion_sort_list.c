@@ -1,11 +1,11 @@
 #include "sort.h"
 
 /**
- * find_len - find te length of a list
+ * find_len - find the length of a list
  * @list: pointer to a list
  *
  * Description: This function finds the length of a list
- * Returns: int
+ * Return: int
  */
 int find_len(listint_t *list)
 {
@@ -16,7 +16,7 @@ int find_len(listint_t *list)
 		list_len++;
 		list = list->next;
 	}
-	return list_len;
+	return (list_len);
 }
 
 /**
