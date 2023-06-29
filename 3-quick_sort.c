@@ -26,8 +26,8 @@ int create_partition(int *array, int left, int right, size_t size)
 			array[j] = temp;
 			if (i != j)
 				print_array(array, size);
+			i++;
 		}
-		i++;
 	}
 	temp = array[i];
 	array[i] = array[right];
@@ -71,7 +71,7 @@ void apply_recursion(int *array, int left, int right, size_t size)
  */
 void quick_sort(int *array, size_t size)
 {
-	if (size > 2)
+	if (size < 2)
 		return;
 	apply_recursion(array, 0, (int)size - 1, size);
 }
