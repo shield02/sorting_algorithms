@@ -13,31 +13,28 @@
  */
 int create_partition(int *array, int left, int right, size_t size)
 {
-	int pivot, j, temp;
+	int pivot, i, j, temp;
 
-	pivot = left - 1;
+	pivot = array[right];
+	i = left;
 	for (j = left; j < right; j++)
 	{
-		if (array[j] < array[right])
+		if (array[j] <= pivot)
 		{
-			pivot++;
-			if (pivot != j)
-			{
-				temp = array[pivot];
-				array[pivot] = array[j];
-				array[j] = temp;
+			temp = array[i];
+			array[i] = array[j];
+			array[j] = temp;
+			if (i != j)
 				print_array(array, size);
-			}
 		}
+		i++;
 	}
-	if (array[right] < array[pivot + 1])
-	{
-		temp = array[pivot + 1];
-		array[pivot + 1] = array[right];
-		array[right] = temp;
+	temp = array[i];
+	array[i] = array[right];
+	array[right] = temp;
+	if (i != j)
 		print_array(array, size);
-	}
-	return (pivot + 1);
+	return (i);
 }
 
 /**
