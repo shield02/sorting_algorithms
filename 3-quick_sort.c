@@ -1,45 +1,6 @@
 #include "sort.h"
 
 /**
- * quick_sort - sort an array of integers using qucik sort
- * @array: array of elements
- * @size: size of the array
- *
- * Description: function that sorts an array of integers in ascending
- * order using the Quick sort algorithm
- * Return: void
- */
-void quick_sort(int *array, size_t size)
-{
-	if (size > 2)
-		return;
-	recursion(array, 0, (int)size - 1, size);
-}
-
-/**
- * recursion - repeat selecting pivot and partition
- * @array: array of elements to be used
- * @left: int variable
- * @right: int variable
- * @size: size of the array
- *
- * Description: This function repeats pivot selection and creating of
- * partition
- * Return: void
- */
-void recursion(int *array, int left, int right, size_t size)
-{
-	int pos;
-
-	if (left < right)
-	{
-		pos = create_partition(array, left, right, size);
-		recursion(array, left, pos - 1, size);
-		recursion(array, pos + 1, right, size);
-	}
-}
-
-/**
  * create_partition - rearrange all smaller elements to the left of pivot
  * @array: array of elements to be used
  * @left: int variable
@@ -55,7 +16,7 @@ int create_partition(int *array, int left, int right, size_t size)
 	int pivot, j, temp;
 
 	pivot = left - 1;
-	for (j = left; j < left; j++)
+	for (j = left; j < right; j++)
 	{
 		if (array[j] < array[right])
 		{
@@ -77,4 +38,43 @@ int create_partition(int *array, int left, int right, size_t size)
 		print_array(array, size);
 	}
 	return (pivot + 1);
+}
+
+/**
+ * apply_recursion - repeat selecting pivot and partition
+ * @array: array of elements to be used
+ * @left: int variable
+ * @right: int variable
+ * @size: size of the array
+ *
+ * Description: This function repeats pivot selection and creating of
+ * partition
+ * Return: void
+ */
+void apply_recursion(int *array, int left, int right, size_t size)
+{
+	int pos;
+
+	if (left < right)
+	{
+		pos = create_partition(array, left, right, size);
+		apply_recursion(array, left, pos - 1, size);
+		apply_recursion(array, pos + 1, right, size);
+	}
+}
+
+/**
+ * quick_sort - sort an array of integers using qucik sort
+ * @array: array of elements
+ * @size: size of the array
+ *
+ * Description: function that sorts an array of integers in ascending
+ * order using the Quick sort algorithm
+ * Return: void
+ */
+void quick_sort(int *array, size_t size)
+{
+	if (size > 2)
+		return;
+	apply_recursion(array, 0, (int)size - 1, size);
 }
