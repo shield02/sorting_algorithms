@@ -78,4 +78,3 @@ int create_partition(int *array, int left, int right, size_t size)
 	}
 	return (pivot + 1);
 }
-
