@@ -3,7 +3,7 @@
 /**
  * heapify - put elements of array in heap order
  * @array: the array to be used
- * @sud_size: size of the subtree
+ * @sub_size: size of the subtree
  * @root: subtree index
  * @size: size of the array
  *
@@ -56,7 +56,7 @@ void heap_sort(int *array, size_t size)
 		array[k] = array[0];
 		array[0] = temp;
 		print_array(array, size);
-		heapify(array, (size_t)k, 0 , size);
+		heapify(array, (size_t)k, 0, size);
 	}
 }
 
