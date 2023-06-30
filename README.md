@@ -8,3 +8,4 @@
 * 101-cocktail_sort_list - function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
 * 102-counting_sort - function that sorts an array of integers in ascending order using the Counting sort algorithm
 * 103-merge_sort - function that sorts an array of integers in ascending order using the Merge sort algorithm
+* 104-heap_sort -  function that sorts an array of integers in ascending order using the Heap sort algorithm
