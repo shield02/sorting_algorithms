@@ -6,3 +6,4 @@
 * 3-quick_sort - function that sorts an array of integers in ascending order using the Quick sort algorithm
 * 100-shell_sort - function that sorts an array of integers in ascending order using the Shell sort algorithm, using the Knuth sequence
 * 101-cocktail_sort_list - function that sorts a doubly linked list of integers in ascending order using the Cocktail shaker sort algorithm
+* 102-counting_sort - function that sorts an array of integers in ascending order using the Counting sort algorithm
