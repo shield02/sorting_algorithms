@@ -28,12 +28,14 @@ void merge_sub(int *carray, int *array, size_t left, size_t middle, size_t right
 		else
 			carray[k] = array[j++];
 	}
-	do {
+	while (i < middle)
+	{
 		carray[k++] = array[i++];
-	} while (i < middle);
-	do {
+	}
+	while (j < right)
+	{
 		carray[k++] = array[j++];
-	} while (j < right);
+	}
 	for (k = left, i = 0; k < right; k++)
 		array[k] = carray[i++];
 
