@@ -9,3 +9,4 @@
 * 102-counting_sort - function that sorts an array of integers in ascending order using the Counting sort algorithm
 * 103-merge_sort - function that sorts an array of integers in ascending order using the Merge sort algorithm
 * 104-heap_sort -  function that sorts an array of integers in ascending order using the Heap sort algorithm
+* 105-radix_sort - function that sorts an array of integers in ascending order using the Radix sort algorithm
