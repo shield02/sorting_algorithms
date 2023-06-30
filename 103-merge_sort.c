@@ -11,7 +11,8 @@
  * Description: This function merges the elements of a subarray
  * Return: void
  */
-void merge_sub(int *carray, int *array, size_t left, size_t middle, size_t right)
+void merge_sub(int *carray, int *array, size_t left, size_t middle,
+		size_t right)
 {
 	size_t i, j, k = 0;
 
