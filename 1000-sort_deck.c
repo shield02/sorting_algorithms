@@ -51,10 +51,10 @@ int _strcmp(const char *str1, const char *str2)
  */
 int cvk(deck_node_t *node)
 {
-	char *kind[4] = {"SPADE", "HEART", "CLUB", "DIAMOND"};
 	char *value[13] = {"Ace", "2", "3", "4", "5", "6", "7", "8", "9",
 		"10", "Jack", "Queen", "King"};
-	int i, kval;
+	char *kind[4] = {"SPADE", "HEART", "CLUB", "DIAMOND"};
+	int i, kval  = 0;
 
 	for (i = 1; i <= 13; i++)
 	{
@@ -63,7 +63,7 @@ int cvk(deck_node_t *node)
 	}
 	for (i = 1; i <= 4; i++)
 	{
-		if (!_strcmp(kind[node->card->kind], kind[1 - 1]))
+		if (!_strcmp(kind[node->card->kind], kind[i - 1]))
 			kval = kval + (13 * i);
 	}
 	return (kval);
