@@ -12,3 +12,4 @@
 * 105-radix_sort - function that sorts an array of integers in ascending order using the Radix sort algorithm
 * 106-bitonic_sort - function that sorts an array of integers in ascending order using the Bitonic sort algorithm
 * 107-quick_sort_hoare - function that sorts an array of integers in ascending order using the Quick sort algorithm
+* 108-sort_deck - function that sorts a deck of cards
